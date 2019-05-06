@@ -1,3 +1,10 @@
+repo: git@github.com:omnivector-solutions/layer-newrelic-infra
 includes: 
   - 'layer:basic'
   - 'layer:apt'
+options:
+  apt:
+    keys:
+      - 'gpg/newrelic-infra.gpg'
+    packages:
+      - 'newrelic-infra'
