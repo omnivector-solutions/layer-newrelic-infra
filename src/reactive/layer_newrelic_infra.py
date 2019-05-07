@@ -37,13 +37,14 @@ def set_license_key():
         newrelic_infra_yml = open("/etc/newrelic-infra.yml", "w")
         newrelic_infra_yml.write("license_key: " + config('license_key'))
 
+        service_restart('newrelic-infra')
+
         clear_flag('newrelic-infra.license_key.update')
         set_flag('newrelic-infra.ready')
 
 
 @when('newrelic-infra.ready')
 def newrelic_infra_ready():
-    service_restart('newrelic-infra')
     status_set('active', "New Relic Infrastructure Agent Ready")
 
 
