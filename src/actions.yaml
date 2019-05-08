@@ -1,0 +1,5 @@
+---
+stop:
+  description: "Stops 'newrelic-infra' service"
+start:
+  description: "Starts 'newrelic-infra' service"
