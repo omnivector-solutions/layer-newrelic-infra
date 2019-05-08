@@ -4,7 +4,6 @@ This layer Installs and configures the newrelic-infra agent
 
 ## Usage
   ```
-    juju deploy cs:~rr-pdl/newrelic-infra
     juju config newrelic-infra license_key=<newrelic_key>
     juju relate newrelic-infra <application>
   ```
